@@ -4,7 +4,7 @@ class Footer extends Component {
     return (
       <div>
         <a href="https://fb.com/mohitsinghmlp">
-          <p> Design & Developed by Mohit Singh Baghel</p>
+          <p className="footer-text"> Design & Developed by Mohit Singh Baghel</p>
         </a>
       </div>
     );

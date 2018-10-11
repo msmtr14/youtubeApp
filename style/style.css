@@ -37,3 +37,8 @@
   font-size: 5rem;
   font-color: #554477
 }
+
+.footer-text:hover{
+  font-family: script;
+  font-size: 200%;
+}
