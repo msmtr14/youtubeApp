@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <div>
         <fieldset>
-          <SearchBar placeholder="Search" onSearchTermChange={videoSearch} />
+          <SearchBar onSearchTermChange={videoSearch} />
         </fieldset>
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
@@ -50,7 +50,6 @@ class App extends Component {
         <br />
         <hr />
         <br />
-        <Footer />
       </div>
     );
   }
@@ -61,3 +60,4 @@ console.info(`%cApp version: ${version}`, 'background: #EBF5F8; color: gray; fon
 /* tslint:enable */
 
 ReactDOM.render(<App />, document.querySelector(".container"));
+ReactDOM.render(<Footer />, document.querySelector(".footer-container"));

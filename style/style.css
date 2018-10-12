@@ -34,11 +34,35 @@
 }
 
 .footer-text{
-  font-size: 5rem;
-  font-color: #554477
+  font-size: 1rem;
+  color: #554477;
 }
 
 .footer-text:hover{
-  font-family: script;
-  font-size: 200%;
+  color: blue;
+  font-size: 120%;
+}
+
+.search-bar-input{
+  padding: 0 0 0 0.5rem;
+}
+
+.search-bar-button {
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  height: 100%;
+  cursor: pointer;
+}
+
+.search-bar-button:hover {
+  background: #ccc;
+}
+
+.footer-layout{
+  background-color: #eee;
+  text-align: center;
+  border: 1;
+  border-radius: 0.2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
