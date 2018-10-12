@@ -8,17 +8,15 @@ class SearchBar extends Component {
   render() {
     return (
       <div className="search-bar-logo">
-        <img src="https://en.wikipedia.org/wiki/YouTube#/media/File:YouTube_Logo_2017.svg" />
         <div className="search-bar">
+          <img className="search-bar-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/512px-YouTube_Logo_2017.svg.png" height="26" width="100"
+          />
           <input
             className="search-bar-input"
             value={this.state.term}
             placeholder="Search"
             onChange={event => this.onInputChange(event.target.value)}
           />
-          <button className="search-bar-button">
-            <icon className="fa fa-search" />
-          </button>
         </div>
       </div>
     );

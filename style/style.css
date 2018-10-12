@@ -66,3 +66,9 @@
   border-radius: 0.2rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
+
+.search-bar-img{
+height: "26";
+width: "100";
+margin-right: 5rem; 
+}
