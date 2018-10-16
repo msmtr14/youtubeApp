@@ -3,12 +3,12 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import YTSearch from "youtube-api-search";
 
-// import SearchBar from "./components/search_bar";
-// import VideoList from "./components/video_list";
-// import VideoDetail from "./components/video_detail";
-// import Footer from "./components/footer";
-
-import { SearchBar, VideoList, VideoDetail, Footer } from "./components"
+import {
+  SearchBar,
+  VideoList,
+  VideoDetail,
+  Footer
+} from "./components"
 
 const API_KEY = "AIzaSyDzFa-lZN3AqogAa_EndIXWg6CNSR7Agyo";
 const version = "1.0.1";
@@ -24,7 +24,10 @@ class App extends Component {
   }
 
   videoSearch(term) {
-    YTSearch({ key: API_KEY, term: term }, videos => {
+    YTSearch({
+      key: API_KEY,
+      term: term
+    }, videos => {
       this.setState({
         videos,
         selectedVideo: videos[0]
@@ -37,20 +40,27 @@ class App extends Component {
     const videoSearch = _.debounce(term => {
       this.videoSearch(term);
     }, 400);
-    return (
-      <div>
-        <fieldset>
-          <SearchBar onSearchTermChange={videoSearch} />
-        </fieldset>
-        <VideoDetail video={this.state.selectedVideo} />
-        <VideoList
-          onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
-          videos={this.state.videos}
-        />
-        <br />
-        <hr />
-        <br />
-      </div>
+    return (<div>
+      <fieldset>
+        <SearchBar onSearchTermChange={
+          videoSearch
+        }
+        /> </fieldset> <
+        VideoDetail video={
+          this.state.selectedVideo
+        }
+      /> <VideoList onVideoSelect={
+        selectedVideo => this.setState({
+          selectedVideo
+        })
+      }
+        videos={
+          this.state.videos
+        }
+      /> <br />
+      <hr />
+      <br />
+    </div>
     );
   }
 }
@@ -59,5 +69,5 @@ class App extends Component {
 console.info(`%cApp version: ${version}`, 'background: #EBF5F8; color: gray; font-size: x-medium; border-radius: 5px; padding: 5px;');
 /* tslint:enable */
 
-ReactDOM.render(<App />, document.querySelector(".container"));
-ReactDOM.render(<Footer />, document.querySelector(".footer-container"));
+ReactDOM.render(< App />, document.querySelector(".container"));
+ReactDOM.render(< Footer />, document.querySelector(".footer-container"));
