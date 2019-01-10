@@ -1,5 +1,5 @@
 {
-  "name": "redux-simple-starter",
+  "name": "YouTube",
   "version": "1.0.0",
   "description": "Simple starter package for Redux with React and Babel support",
   "main": "index.tsx",
@@ -10,6 +10,9 @@
 	"test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     
 	"test:watch": "npm run test -- --watch"
+  },
+    "engines": {
+    "node":"8.11.3"
   },
   "author": "",
   "license": "ISC",
